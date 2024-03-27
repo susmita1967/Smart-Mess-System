@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu1"
+    android:padding="16dp">
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/textdisplay"
+               android:text="Today's Menu"
+               android:textSize="40sp"
+               android:textColor="@color/black"
+               android:textStyle="bold"
+               android:layout_marginTop="140dp"
+               android:layout_marginLeft="40dp">
+
+           </TextView>
+
+           <TextView
+               android:id="@+id/editTextDate"
+               android:layout_width="215dp"
+               android:layout_height="84dp"
+               android:layout_marginLeft="60dp"
+               android:layout_marginTop="200dp"
+               android:layout_marginBottom="50dp"
+               android:textColor="@color/black"
+               android:textSize="30sp"
+               android:textStyle="bold">
+
+           </TextView>
+
+           <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+               android:layout_below="@id/editTextDate">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:paddingTop="5dp"
+                    android:text="Meal Time"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="20dp"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/afternoon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:textColor="@color/black"
+                    android:text="Afternoon"
+                    android:textSize="20sp"></CheckBox>
+
+                <CheckBox
+                    android:id="@+id/night"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Night"
+                    android:textSize="20sp"></CheckBox>
+                </GridLayout>
+
+                <TextView
+                    android:id="@+id/roti1"
+                    android:layout_width="95dp"
+                    android:layout_height="53dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Roti"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/radiochapati"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Chapati"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/radioparatha"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Paratha"
+                        android:textSize="20sp"></CheckBox>
+                    <CheckBox
+                        android:id="@+id/radiopuri"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Poori"
+                        android:textSize="20sp"></CheckBox>
+                </GridLayout>
+
+
+
+                <!-- Add your checkboxes here -->
+                <TextView
+                    android:id="@+id/rice"
+                    android:textColor="@color/black"
+                    android:layout_width="100dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingTop="5dp"
+                    android:text="Rice"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:textColor="@color/black"
+                        android:id="@+id/radioplainrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Plain Rice"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/radiojirarice"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Jeera Rice"
+                        android:textSize="20sp"></CheckBox>
+                </GridLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/sabji"
+                    android:layout_width="100dp"
+                    android:textColor="@color/black"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Sabji"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/kobi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Kobi"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/methi"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Methi"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/batata"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Batata"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/vangi"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Vangi"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/matki"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Matki"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/mug"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Mug"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/chana"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="chana"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/dodka"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Dodka"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/masur"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Masur"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/flower"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Flower"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/bhendi"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Bhendi"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/benas"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Benas"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/dalbhaji"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Dal-Bhaji"
+                        android:textSize="20sp"></CheckBox>
+                </GridLayout>
+
+                <TextView
+                    android:id="@+id/sider"
+                    android:textColor="@color/black"
+                    android:layout_width="100dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Lonache/Kharada/Chatani/Salad"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/lonche"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Lonache"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:textColor="@color/black"
+                        android:id="@+id/kharda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Kharada"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/chatani"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Chatani"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/saladyes"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Salad"
+                        android:textSize="20sp"></CheckBox>
+                </GridLayout>
+
+                <TextView
+                    android:id="@+id/dahitak"
+                    android:textColor="@color/black"
+                    android:layout_width="100dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Dahi/Tak/Kadhi"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/dahi"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:text="Dahi"
+
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/tak"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+
+                        android:text="Tak"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/kadhi"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:text="Kadhi"
+                        android:textSize="20sp"></CheckBox>
+                </GridLayout>
+
+
+                <TextView
+                    android:id="@+id/papad_talan"
+                    android:textColor="@color/black"
+                    android:layout_width="100dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Papad/Talan"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/papad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Papad"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/bobis"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Bobi"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/trikintalan"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Trikon Papad"
+                        android:textSize="20sp"></CheckBox>
+                </GridLayout>
+
+                <TextView
+                    android:id="@+id/specialdish"
+                    android:textColor="@color/black"
+                    android:layout_width="100dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Special Menu"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chiken"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Chiken"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/paneer"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Paneer"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/pulav"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Pulav"
+                        android:textSize="20sp"></CheckBox>
+                    <CheckBox
+                        android:id="@+id/biryani"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Biryani"
+                        android:textSize="20sp"></CheckBox>
+                    <CheckBox
+                        android:id="@+id/chole"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Chole"
+                        android:textSize="20sp"></CheckBox>
+                    <CheckBox
+                        android:id="@+id/kurma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Kurma"
+                        android:textSize="20sp"></CheckBox>
+                    <CheckBox
+                        android:id="@+id/egg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Egg-Curry"
+                        android:textSize="20sp"></CheckBox>
+                </GridLayout>
+
+                <TextView
+                    android:id="@+id/sweetdish"
+                    android:layout_width="100dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Sweet Dish"
+                    android:textAlignment="center"
+                    android:textSize="23sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/kheer"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Kheer"
+                        android:textSize="20sp"></CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/basundi"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Basundi"
+                        android:textSize="20sp"></CheckBox>
+                    <CheckBox
+                        android:id="@+id/ras_malai"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Ras-Malai"
+                        android:textSize="20sp"></CheckBox>
+                    <CheckBox
+                        android:id="@+id/gulabjamun"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Gulab-Jamun"
+                        android:textSize="20sp"></CheckBox>
+                    <CheckBox
+                        android:id="@+id/amrkhand"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Amrkhand"
+                        android:textSize="20sp"></CheckBox>
+                    <CheckBox
+                        android:id="@+id/shrikhand"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Shrikhand"
+                        android:textSize="20sp"></CheckBox>
+                </GridLayout>
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="162dp"
+                    android:layout_height="63dp"
+                    android:text="Save"
+                    android:textColorHighlight="@color/app_theme_light"
+                    android:textColorLink="@color/antique_white"
+                    android:textSize="24sp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar8"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+
+       </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_cyan"
+    tools:context=".Admin_Dashboard">
+
+    <RelativeLayout
+        android:layout_width="523dp"
+        android:layout_height="974dp"
+        android:backgroundTint="@color/old_lace"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:background="@color/pink"
+            android:backgroundTint="@color/pink"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="201dp"
+                android:layout_height="72dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="307dp"
+                android:layout_marginEnd="314dp"
+                android:layout_marginBottom="595dp"
+                android:fontFamily="sans-serif-medium"
+                android:fontFeatureSettings="@string/app_name"
+                android:text="Update Menu"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="199dp"
+                android:layout_height="51dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="212dp"
+                android:layout_marginTop="620dp"
+                android:layout_marginEnd="112dp"
+                android:layout_marginBottom="303dp"
+                android:fontFamily="sans-serif-medium"
+                android:fontFeatureSettings="@string/app_name"
+                android:text="View Feedback"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/feedback"
+                android:layout_width="167dp"
+                android:layout_height="171dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="219dp"
+                android:layout_marginTop="422dp"
+                android:layout_marginEnd="137dp"
+                android:layout_marginBottom="381dp"
+                android:background="@drawable/viewfeedback"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/Viewattendance"
+                android:layout_width="158dp"
+                android:layout_height="165dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="224dp"
+                android:layout_marginTop="131dp"
+                android:layout_marginEnd="141dp"
+                android:layout_marginBottom="678dp"
+                android:background="@drawable/viewattendence"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="158dp"
+                android:layout_height="165dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="624dp"
+                android:layout_marginEnd="323dp"
+                android:layout_marginBottom="299dp"
+                android:fontFamily="sans-serif-medium"
+                android:fontFeatureSettings="@string/app_name"
+                android:text="View Voting"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="192dp"
+                android:layout_height="75dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="218dp"
+                android:layout_marginTop="307dp"
+                android:layout_marginEnd="113dp"
+                android:layout_marginBottom="592dp"
+                android:fontFamily="sans-serif-medium"
+                android:fontFeatureSettings="@string/app_name"
+                android:text="View Attendance"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/vegnonveg"
+                android:layout_width="163dp"
+                android:layout_height="171dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="424dp"
+                android:layout_marginEnd="341dp"
+                android:layout_marginBottom="379dp"
+                android:background="@drawable/viewvote"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/updatemenu"
+                android:layout_width="168dp"
+                android:layout_height="161dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="133dp"
+                android:layout_marginEnd="335dp"
+                android:layout_marginBottom="680dp"
+                android:background="@drawable/updatemenu1"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="106dp"
+                android:layout_height="83dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="165dp"
+                android:layout_marginEnd="317dp"
+                android:layout_marginBottom="726dp"
+                android:text="Today's Menu"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/adminlogoutbtn"
+                android:layout_width="141dp"
+                android:layout_height="69dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="134dp"
+                android:layout_marginTop="726dp"
+                android:layout_marginEnd="248dp"
+                android:backgroundTint="@color/black"
+                android:padding="10dp"
+                android:text="Logout"
+                android:textColorHighlight="@color/light_grey"
+                android:textColorLink="@color/dark_blue"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.008" />
+
+            <TextView
+                android:id="@+id/usernamemain"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="286dp"
+                android:layout_marginBottom="924dp"
+                android:drawableLeft="@drawable/baseline_account_circle_24"
+                android:text="SWVSM"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

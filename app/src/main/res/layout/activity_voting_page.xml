@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/voting1"
+    tools:context=".Voting_Page">
+
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="323dp"
+        android:layout_height="105dp"
+        android:background="#0CE3DBE4"
+        android:text="VOTING"
+        android:textAlignment="center"
+        android:textColor="@color/dark_slate_gray"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.119" />
+
+    <RadioGroup
+        android:id="@+id/radiovote"
+        android:layout_width="195dp"
+        android:layout_height="181dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="188dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView9">
+
+        <RadioButton
+            android:id="@+id/radiononveg"
+            android:layout_width="wrap_content"
+            android:layout_height="95dp"
+            android:layout_marginBottom="30dp"
+            android:text="NON-VEG"
+            android:textColor="@color/maroon"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radioveg"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="VEG"
+            android:textColor="@color/dark_green"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/radiononveg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.513"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.963" />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submitvote"
+        android:layout_width="143dp"
+        android:layout_height="88dp"
+        android:backgroundTint="@color/dark_slate_gray"
+        android:text=" SUBMIT"
+        android:textColor="@color/white"
+        android:textColorHint="@color/floral_white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.927" />
+
+    <ProgressBar
+        android:id="@+id/progressBar7"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="95dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.788" />
+
+
+    <TextView
+        android:id="@+id/mealtime1"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/radiovote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <TextView
+        android:id="@+id/displayday1"
+        android:layout_width="174dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.345" />
+
+    <TextView
+        android:id="@+id/displaydate1"
+        android:layout_width="162dp"
+        android:layout_height="51dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintStart_toEndOf="@+id/displayday1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.344" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

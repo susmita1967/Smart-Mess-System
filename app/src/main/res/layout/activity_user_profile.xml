@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/medium_slate_blue"
+    tools:context=".User_Profile">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginBottom="627dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="192dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="633dp"
+        app:srcCompat="@drawable/userprofile" />
+
+    <EditText
+        android:id="@+id/updatepass"
+        android:layout_width="346dp"
+        android:layout_height="69dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="274dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="526dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="text"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/updateclass"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="460dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="338dp"
+        android:ems="10"
+        android:hint="Class"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/updatephone"
+        android:layout_width="wrap_content"
+        android:layout_height="71dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="554dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="246dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/updateroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="649dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="141dp"
+        android:ems="10"
+        android:hint="Room Number"
+        android:inputType="text"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/updateprofilebtn"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="756dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="#009688"
+        android:text="Update Profile"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="231dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="594dp"
+        android:background="@drawable/edit_text_background"
+        android:text="Upload Image"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/updateconpass"
+        android:layout_width="348dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="430dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="text"
+        android:textColor="@color/black" />
+
+    <ProgressBar
+        android:id="@+id/progressBar12"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="128dp"
+        android:layout_height="113dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="412dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="345dp" />
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sky_blue"
+    tools:context=".successsfully">
+
+   <!--<pl.droidsonroids.gif.GifImageView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_alignParentBottom="true"
+       android:layout_marginTop="32dp"
+       android:layout_marginBottom="99dp"
+       android:adjustViewBounds="false"
+       android:src="@drawable/check_gif" />-->
+
+   <TextView
+       android:id="@+id/sty"
+       android:layout_width="481dp"
+       android:layout_height="97dp"
+       android:layout_alignParentStart="true"
+       android:layout_alignParentEnd="true"
+       android:layout_alignParentBottom="true"
+       android:layout_marginStart="-34dp"
+       android:layout_marginEnd="-31dp"
+       android:layout_marginBottom="301dp"
+       android:text="Successfully Registered...!!!"
+       android:textAlignment="center"
+       android:textColor="@color/black"
+       android:textSize="30dp"
+       android:textStyle="bold" />
+
+   <Button
+       android:id="@+id/backbtn1"
+       android:layout_width="241dp"
+       android:layout_height="61dp"
+       android:layout_alignParentStart="true"
+       android:layout_alignParentEnd="true"
+       android:layout_alignParentBottom="true"
+       android:layout_marginStart="85dp"
+       android:layout_marginEnd="85dp"
+       android:layout_marginBottom="191dp"
+       android:backgroundTint="@color/cornsilk"
+       android:fontFamily="sans-serif-medium"
+       android:text="Back to Login Page"
+       android:textColor="@color/black"
+       android:textSize="16sp" />
+
+   <pl.droidsonroids.gif.GifImageView
+       android:layout_width="match_parent"
+       android:layout_height="640dp"
+       android:layout_above="@+id/sty"
+       android:layout_marginBottom="-96dp"
+       android:src="@drawable/check_gif" />
+
+</RelativeLayout>

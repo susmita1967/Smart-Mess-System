@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_cyan"
+    tools:context=".Main_Page">
+
+    <RelativeLayout
+        android:layout_width="523dp"
+        android:layout_height="974dp"
+        android:backgroundTint="@color/old_lace"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <RelativeLayout
+            android:layout_width="523dp"
+            android:layout_height="974dp"
+            android:background="@color/sky_blue"
+            android:backgroundTint="@color/sky_blue"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="201dp"
+                android:layout_height="72dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="333dp"
+                android:layout_marginBottom="576dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:fontFeatureSettings="@string/app_name"
+                android:text=" View Menu"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="199dp"
+                android:layout_height="51dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="121dp"
+                android:layout_marginBottom="316dp"
+                android:fontFamily="sans-serif-medium"
+                android:fontFeatureSettings="@string/app_name"
+                android:text="Feedback"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/feedback"
+                android:layout_width="187dp"
+                android:layout_height="188dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="124dp"
+                android:layout_marginBottom="383dp"
+                android:background="@drawable/feedback1"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/markattendance"
+                android:layout_width="187dp"
+                android:layout_height="188dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="124dp"
+                android:layout_marginBottom="664dp"
+                android:background="@drawable/largenotification"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="199dp"
+                android:layout_height="51dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="323dp"
+                android:layout_marginBottom="313dp"
+                android:fontFamily="sans-serif-medium"
+                android:fontFeatureSettings="@string/app_name"
+                android:text="Voting"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="201dp"
+                android:layout_height="72dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="119dp"
+                android:layout_marginBottom="573dp"
+                android:fontFamily="sans-serif-medium"
+                android:fontFeatureSettings="@string/app_name"
+                android:text="Mark Attendance"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/vegnonveg"
+                android:layout_width="187dp"
+                android:layout_height="188dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="329dp"
+                android:layout_marginBottom="381dp"
+                android:background="@drawable/veg_nonveg"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/viewmenu"
+                android:layout_width="187dp"
+                android:layout_height="188dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="325dp"
+                android:layout_marginBottom="663dp"
+                android:background="@drawable/viewmwnu"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="128dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="305dp"
+                android:layout_marginBottom="730dp"
+                android:text="Today's Menu"
+                android:textColor="@color/black"
+                android:textSize="27sp" />
+
+            <Button
+                android:id="@+id/usermainlogoutbtn"
+                android:layout_width="140dp"
+                android:layout_height="68dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="131dp"
+                android:layout_marginTop="722dp"
+                android:layout_marginEnd="252dp"
+                android:layout_marginBottom="184dp"
+                android:backgroundTint="@color/app_thene"
+                android:padding="10dp"
+                android:text="Logout"
+                android:textColorHighlight="@color/dark_blue"
+                android:textColorLink="@color/dark_blue"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.008" />
+
+            <TextView
+                android:id="@+id/usernamemain"
+                android:layout_width="264dp"
+                android:layout_height="66dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="93dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="166dp"
+                android:layout_marginBottom="885dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/profileuser"
+                android:layout_width="65dp"
+                android:layout_height="75dp"
+                android:layout_alignEnd="@+id/usernamemain"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="280dp"
+                android:layout_marginBottom="885dp"
+                app:srcCompat="@drawable/b5" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
