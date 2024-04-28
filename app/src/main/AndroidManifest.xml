@@ -17,12 +17,16 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Registration_Page"
         tools:targetApi="31">
         <activity
-            android:name=".Notification_Activity"
+            android:name=".Previous_vote_reports"
+            android:exported="false" />
+        <activity
+            android:name=".View_Previous_Reports"
             android:exported="false" />
         <activity
             android:name=".User_Profile"
@@ -88,7 +92,7 @@
             android:name=".Registration"
             android:exported="false" />
 
-        <receiver android:name=".AlarmReceiver"/>
+        <receiver android:name=".AlarmReceiver" />
     </application>
 
 </manifest>

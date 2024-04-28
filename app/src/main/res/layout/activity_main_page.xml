@@ -33,10 +33,10 @@
                 android:layout_marginEnd="333dp"
                 android:layout_marginBottom="576dp"
                 android:fontFamily="sans-serif-medium"
-                android:textColor="@color/black"
                 android:fontFeatureSettings="@string/app_name"
                 android:text=" View Menu"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
@@ -51,8 +51,8 @@
                 android:fontFamily="sans-serif-medium"
                 android:fontFeatureSettings="@string/app_name"
                 android:text="Feedback"
-                android:textColor="@color/black"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="27sp"
                 android:textStyle="bold" />
 
@@ -105,8 +105,8 @@
                 android:fontFamily="sans-serif-medium"
                 android:fontFeatureSettings="@string/app_name"
                 android:text="Mark Attendance"
-                android:textColor="@color/black"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
@@ -152,10 +152,10 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="131dp"
-                android:layout_marginTop="722dp"
-                android:layout_marginEnd="252dp"
-                android:layout_marginBottom="184dp"
+                android:layout_marginStart="134dp"
+                android:layout_marginTop="766dp"
+                android:layout_marginEnd="249dp"
+                android:layout_marginBottom="140dp"
                 android:backgroundTint="@color/app_thene"
                 android:padding="10dp"
                 android:text="Logout"
@@ -197,6 +197,45 @@
                 android:layout_marginEnd="280dp"
                 android:layout_marginBottom="885dp"
                 app:srcCompat="@drawable/b5" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/usermainlogoutbtn"
+                android:layout_marginBottom="747dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/recent_attendance"
+                android:layout_width="135dp"
+                android:layout_height="62dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="689dp"
+                android:layout_marginEnd="364dp"
+                android:layout_marginBottom="223dp"
+                android:text="Your Recent Attendance ="
+                android:textColor="@color/material_dynamic_neutral0"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/your_recent_attendance"
+                android:layout_width="241dp"
+                android:layout_height="46dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="172dp"
+                android:layout_marginTop="699dp"
+                android:layout_marginEnd="110dp"
+                android:layout_marginBottom="229dp"
+                android:textColor="#070707"
+                android:textSize="20sp" />
 
 
         </RelativeLayout>

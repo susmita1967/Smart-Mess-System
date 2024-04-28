@@ -374,9 +374,9 @@ public class Update_Menu extends AppCompatActivity {
                 else {
                     meal = selectedCheckboxValues1.get(0);
                     if (meal.equals("Afternoon")) {
-                        setAlarm(11, 40); // Set alarm at 8 AM
+                        setAlarm(7, 20); // Set alarm at 7.20 AM
                     } else if (meal.equals("Night")) {
-                        setAlarm(16,50 ); // Set alarm at 5 PM (17:00)
+                        setAlarm(18,20 ); // Set alarm at 4.50 PM (17:00)
                     }
                     roti=selectedCheckboxValues2.get(0);
                     rice=selectedCheckboxValues3.get(0);

@@ -25,7 +25,7 @@ public class View_Menu extends AppCompatActivity {
     private Calendar calendar;
     private SimpleDateFormat dateFormat;
     private DatabaseReference menuRef;
-    private String date,item1,item2,item3,item4,item5,item6,item7,item9,item10;
+    private String date,username1,profurl,grn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,10 @@ public class View_Menu extends AppCompatActivity {
         setContentView(binding.getRoot());
         String mealtime = "";
         calendar=Calendar.getInstance();
+        Intent i=getIntent();
+        grn=i.getStringExtra("passgrn");
+        username1 = i.getStringExtra("username");
+        profurl=i.getStringExtra("urlimg");
         dateFormat=new SimpleDateFormat("yyyy/MM/dd");
         date=dateFormat.format(calendar.getTime());
         binding.editTextDate.setText(date);
@@ -42,20 +46,20 @@ public class View_Menu extends AppCompatActivity {
         binding.close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username1 = getIntent().getStringExtra("username");
-                String profurl=getIntent().getStringExtra("urlimg");
-                if (username1 != null && profurl!=null) {
+
+                //if (username1 != null && profurl!=null) {//and ch or kelay
                     Intent intent = new Intent(View_Menu.this, Main_Page.class);
                     intent.putExtra("username", username1); // Pass the username back to Main_Page
                     intent.putExtra("urlimg",profurl);
+                    intent.putExtra("passgrn",grn);
                     startActivity(intent);
                     finish();
-                }
+               /* }
                 else
                 {
                     Toast.makeText(View_Menu.this,"something is null..!!",Toast.LENGTH_SHORT).show();
 
-                }
+                }*/
 
 
             }

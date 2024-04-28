@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Date Picker -->
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Text View to Display Selected Date -->
+    <TextView
+        android:id="@+id/selectedDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Date: "
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Spinner for Meal Time -->
+    <!-- Text View to Display Selected Meal Time -->
+    <TextView
+        android:id="@+id/selectedMealTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"/>
+
+
+    <!-- Button to View Report -->
+    <Spinner
+        android:id="@+id/mealTimeSpinner"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:entries="@array/meal_time_options" />
+
+    <Button
+        android:id="@+id/viewReportButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Report"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

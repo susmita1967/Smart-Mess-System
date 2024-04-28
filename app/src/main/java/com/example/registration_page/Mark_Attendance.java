@@ -47,7 +47,7 @@ public class Mark_Attendance extends AppCompatActivity {
         setContentView(binding.getRoot());
         binding.progressBar6.setVisibility(View.INVISIBLE);
         Intent intent=getIntent();
-        final String pg3=intent.getStringExtra("pg2");
+        //final String pg3=intent.getStringExtra("pg2");
         String mealtime = "";
         calendar=Calendar.getInstance();
         dateFormat=new SimpleDateFormat("yyyy/MM/dd");
@@ -57,13 +57,14 @@ public class Mark_Attendance extends AppCompatActivity {
         String dayOfWeek = dateFormat.format(calendar.getTime());
         binding.daydisplay.setText(dayOfWeek);
         int hourOfDay = calendar.get(Calendar.HOUR_OF_DAY);
-        if (hourOfDay >= 5 && hourOfDay < 13) {
+        if (hourOfDay >= 5 && hourOfDay < 14) {
             mealtime= "Afternoon";
             binding.mealtime.setText(mealtime);
-        } else if (hourOfDay >= 14 && hourOfDay <= 17) {
+        } else if (hourOfDay >= 14 && hourOfDay <= 24) {
             mealtime= "Night";
             binding.mealtime.setText(mealtime);
         }
+        final String pg3=intent.getStringExtra("passgrn");
         if(pg3!=null)
         {
             reference = FirebaseDatabase.getInstance().getReference().child("Students");
@@ -107,7 +108,10 @@ public class Mark_Attendance extends AppCompatActivity {
 
                     //final String id=pg3;
                     nm=nme;
-                    if(pg3!=null)
+                    Intent i1=getIntent();
+                    String finalMealtime1 = finalMealtime;
+                    //final String pg31=i1.getStringExtra("pg2");
+                    if(i1.getStringExtra("passgrn")!=null)
                     {
                         Attendance attendance = new Attendance(pg3,nm,p1, finalMealtime,date);
                         db = FirebaseDatabase.getInstance();
@@ -121,20 +125,23 @@ public class Mark_Attendance extends AppCompatActivity {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             binding.progressBar6.setVisibility(View.INVISIBLE);
+                                            String iduser=getIntent().getStringExtra("passgrn");
                                             String username1 = getIntent().getStringExtra("username");
                                             String profurl=getIntent().getStringExtra("urlimg");
-                                            if (username1 != null && profurl!=null) {
+                                            //if (username1 != null || profurl!=null) {//and ch or kelay
                                                 Intent intent = new Intent(Mark_Attendance.this, Main_Page.class);
                                                 intent.putExtra("username", username1); // Pass the username back to Main_Page
                                                 intent.putExtra("urlimg",profurl);
+                                                intent.putExtra("passgrn", iduser);
+                                                intent.putExtra("pg2", iduser);
                                                 Toast.makeText(Mark_Attendance.this,"Attendance is marked!!",Toast.LENGTH_SHORT).show();
                                                 startActivity(intent);
                                                 finish();
-                                            }
-                                            else
+                                           // }
+                                            /*else
                                             {
-                                                Toast.makeText(Mark_Attendance.this,"username is null!!",Toast.LENGTH_SHORT).show();
-                                            }
+                                                //Toast.makeText(Mark_Attendance.this,"username is null!!",Toast.LENGTH_SHORT).show();
+                                            }*/
 
                                         }
                                     }).addOnFailureListener(new OnFailureListener() {
@@ -150,20 +157,25 @@ public class Mark_Attendance extends AppCompatActivity {
                                     //id=pg3;
                                     if(pg3!=null)
                                     {
+                                        String finalMealtime2 = finalMealtime;
                                         reference.child("Attendance").child(date).child(finalMealtime).child(pg3).setValue(attendance).addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 binding.progressBar6.setVisibility(View.INVISIBLE);
+                                                String iduser=getIntent().getStringExtra("pg2");
                                                 String username1 = getIntent().getStringExtra("username");
                                                 String profurl=getIntent().getStringExtra("urlimg");
-                                                if (username1 != null && profurl!=null) {
+                                                //if (username1 != null && profurl!=null) {
                                                     Intent intent = new Intent(Mark_Attendance.this, Main_Page.class);
                                                     intent.putExtra("username", username1); // Pass the username back to Main_Page
                                                     intent.putExtra("urlimg",profurl);
+                                                     intent.putExtra("passgrn", iduser);
+                                                intent.putExtra("pg2", iduser);
                                                     Toast.makeText(Mark_Attendance.this,"Attendance is marked!!",Toast.LENGTH_SHORT).show();
                                                     startActivity(intent);
                                                     finish();
-                                                }}
+                                               // }
+                                                }
                                         });
                                     }
                                     else

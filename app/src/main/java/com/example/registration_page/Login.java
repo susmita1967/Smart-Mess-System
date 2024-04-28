@@ -124,7 +124,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(Login.this, Forget_Pasword.class);
                 startActivity(intent);
-                finish();
+                //finish();
             }
         });
     }

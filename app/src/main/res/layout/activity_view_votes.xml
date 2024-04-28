@@ -7,6 +7,21 @@
     android:background="@drawable/img6"
     tools:context=".View_Votes">
 
+    <Button
+        android:id="@+id/downloadprevotereport"
+        android:layout_width="292dp"
+        android:layout_height="63dp"
+        android:backgroundTint="@color/app_theme_light"
+        android:text="Previous Voting Reports"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.901" />
+
     <TextView
         android:id="@+id/textView10"
         android:layout_width="269dp"
@@ -29,7 +44,7 @@
         android:layout_width="164dp"
         android:layout_height="51dp"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/azure"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +58,7 @@
         android:layout_width="162dp"
         android:layout_height="49dp"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/azure"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +72,7 @@
         android:layout_width="158dp"
         android:layout_height="54dp"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/azure"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +87,7 @@
         android:layout_height="57dp"
         android:text="Veg Count"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/azure"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,11 +99,11 @@
     <TextView
         android:id="@+id/nonvegcnt"
         android:layout_width="183dp"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:text="Non-Veg Count"
-        android:textSize="24sp"
         android:layout_height="57dp"
+        android:text="Non-Veg Count"
+        android:textAlignment="center"
+        android:textColor="@color/azure"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.114"
@@ -98,11 +113,11 @@
 
     <TextView
         android:id="@+id/vegcount"
-        android:layout_width="119dp"
+        android:layout_width="210dp"
         android:layout_height="52dp"
         android:layout_marginTop="80dp"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/azure"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.587"
@@ -115,12 +130,26 @@
         android:layout_height="54dp"
         android:layout_marginBottom="352dp"
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textColor="@color/azure"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toEndOf="@+id/nonvegcnt"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintStart_toEndOf="@+id/nonvegcnt" />
+
+    <Button
+        android:id="@+id/downloadvotingreport"
+        android:layout_width="292dp"
+        android:layout_height="63dp"
+        android:backgroundTint="@color/app_theme_light"
+        android:text="Download Voting Report"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.768" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

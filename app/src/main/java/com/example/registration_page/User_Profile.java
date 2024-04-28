@@ -49,7 +49,7 @@ import javax.crypto.NoSuchPaddingException;
 public class User_Profile extends AppCompatActivity {
     ActivityUserProfileBinding binding;
     String pg4;
-    String cl, rn, pass, phn, cnp,urlprofimg;
+    String cl, rn, pass, phn, cnp,urlprofimg,img;
     Bitmap bitmap;
     FirebaseDatabase db;
     String encryptconpassword,encryptedtpassword;
@@ -66,27 +66,35 @@ public class User_Profile extends AppCompatActivity {
         binding.progressBar12.setVisibility(View.INVISIBLE);
         Intent intent = getIntent();
         pg4 = intent.getStringExtra("pg2");
+        img=intent.getStringExtra("urlimg");
         db=FirebaseDatabase.getInstance();
         reference=db.getReference("Students");
-        reference.child(pg4).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.child("profileImageUrl").exists())
-                {
-                    String profileImageUrl = snapshot.child("profileImageUrl").getValue(String.class);
+       if(pg4!=null)
+       {
+           reference.child(pg4).addListenerForSingleValueEvent(new ValueEventListener() {
+               @Override
+               public void onDataChange(@NonNull DataSnapshot snapshot) {
+                   if(snapshot.child("profileImageUrl").exists())
+                   {
+                       String profileImageUrl = snapshot.child("profileImageUrl").getValue(String.class);
 
-                    // Use an image loading library like Glide or Picasso to load the image into the ImageView
-                    Glide.with(User_Profile.this)
-                            .load(profileImageUrl)
-                            .into(binding.imageView4);
-                }
-            }
+                       // Use an image loading library like Glide or Picasso to load the image into the ImageView
+                       Glide.with(User_Profile.this)
+                               .load(profileImageUrl)
+                               .into(binding.imageView4);
+                   }
+               }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+               @Override
+               public void onCancelled(@NonNull DatabaseError error) {
 
-            }
-        });
+               }
+           });
+       }
+       else
+       {
+           Toast.makeText(User_Profile.this, "id is null", Toast.LENGTH_SHORT).show();
+       }
         // Initialize Firebase Storage
         storage = FirebaseStorage.getInstance();
 
@@ -131,54 +139,6 @@ public class User_Profile extends AppCompatActivity {
                 cnp=binding.updateconpass.getText().toString();
                 db=FirebaseDatabase.getInstance();
                 reference=db.getReference("Students");
-               /* if (bitmap != null) {
-                    // Generate a unique ID (using pg4 as an example)
-                    String uniqueId = pg4;
-
-                    // Get a reference to the Firebase Storage location with the unique ID
-                    StorageReference storageRef = FirebaseStorage.getInstance().getReference().child("profile_images").child(uniqueId);
-
-                    // Convert the bitmap to a byte array (you can also compress the image)
-                    ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-                    byte[] data = baos.toByteArray();
-
-                    // Upload the image to Firebase Storage
-                    UploadTask uploadTask = storageRef.putBytes(data);
-
-                    // Register observers to listen for when the upload is done or if it fails
-                    uploadTask.addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                            if (task.isSuccessful()) {
-                                // Image uploaded successfully
-                                Toast.makeText(User_Profile.this, "Profile image uploaded successfully", Toast.LENGTH_SHORT).show();
-
-                                // Get the download URL of the uploaded image (if needed)
-                                storageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                    @Override
-                                    public void onSuccess(Uri uri) {
-                                        // uri contains the download URL
-                                        String downloadUrl = uri.toString();
-
-                                        // Save the download URL in the Firebase Realtime Database
-                                        reference.child(pg4).child("profileImageUrl").setValue(downloadUrl);
-
-                                    }
-                                });
-                            } else {
-                                // Image upload failed
-                                Toast.makeText(User_Profile.this, "Failed to upload profile image", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception exception) {
-                            // Handle unsuccessful uploads
-                            Toast.makeText(User_Profile.this, "Failed to upload profile image", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }*/
                 reference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -259,10 +219,14 @@ public class User_Profile extends AppCompatActivity {
                             }
                             binding.progressBar12.setVisibility(View.INVISIBLE);
                             String username1 = getIntent().getStringExtra("username");
-                            if(username1!=null && urlprofimg!=null) {
+                            if(urlprofimg!=null)
+                            {
+                                img=urlprofimg;
+                            }
+                            if(username1!=null || img!=null) {//and ch or kelay
                                 Intent intent11 = new Intent(User_Profile.this, Main_Page.class);
                                 intent11.putExtra("username", username1); // Pass the username back to Main_Page
-                                intent11.putExtra("urlimg", urlprofimg);
+                                intent11.putExtra("urlimg", img);
                                 Toast.makeText(User_Profile.this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
                                 startActivity(intent11);
                             }

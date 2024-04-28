@@ -31,9 +31,10 @@ public class Main_Page extends AppCompatActivity {
     ActivityMainPageBinding binding;
     FirebaseDatabase db;
     private SimpleDateFormat dateFormat;
+
     Calendar calendar;
 
-    String pg,username,un,profurl,prof;
+    String pg,username,un,profurl,prof,iduser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class Main_Page extends AppCompatActivity {
         String dayOfWeek = dateFormat.format(calendar.getTime());
         Intent intent=getIntent();
         pg=intent.getStringExtra("passgrn");
+        iduser=getIntent().getStringExtra("pg2");
         db = FirebaseDatabase.getInstance();
         username = getIntent().getStringExtra("username");
         if (username != null) {
@@ -112,8 +114,20 @@ public class Main_Page extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 Intent intent10=new Intent(Main_Page.this, User_Profile.class);
-                intent10.putExtra("pg2",pg);
-                intent10.putExtra("username", un);
+                Intent i=getIntent();
+                String pg11=i.getStringExtra("passgrn");
+                String un1=i.getStringExtra("username");
+                if(pg11!=null)
+                {
+                    intent10.putExtra("pg2",pg11);
+                    intent10.putExtra("username", un1);
+                    intent10.putExtra("urlimg",prof);
+                }
+                else
+                {
+                    Toast.makeText(Main_Page.this,"errorrrrrrrrrrr...!!!",Toast.LENGTH_SHORT).show();
+
+                }
                 startActivity(intent10);
                 return false;
             }
@@ -132,8 +146,13 @@ public class Main_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main_Page.this, View_Menu.class);
-                intent.putExtra("username", un); // Pass the username obtained from Firebase
-                intent.putExtra("urlimg",profurl);
+                Intent i1=getIntent();
+                String pg11=i1.getStringExtra("passgrn");
+                String un2=i1.getStringExtra("username");
+                String prof1=i1.getStringExtra("urlimg");
+                intent.putExtra("passgrn",pg11);
+                intent.putExtra("username", un2); // Pass the username obtained from Firebase
+                intent.putExtra("urlimg",prof1);
                 startActivity(intent);
                /* Intent intent4=new Intent(Main_Page.this, View_Menu.class);
                // Toast.makeText(Main_Page.this,"Successfully logged out...!!!",Toast.LENGTH_SHORT).show();
@@ -148,16 +167,20 @@ public class Main_Page extends AppCompatActivity {
                 dateFormat=new SimpleDateFormat("yyyy/MM/dd");
                 SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE", Locale.getDefault());
                 int hourOfDay = calendar.get(Calendar.HOUR_OF_DAY);
-                if (!(hourOfDay >= 5 && hourOfDay < 14) && !(hourOfDay >= 14 && hourOfDay <= 17))
+                if (!(hourOfDay >= 5 && hourOfDay < 14) && !(hourOfDay >= 14 && hourOfDay <= 24))
                 {
                     Toast.makeText(Main_Page.this,"Time is exceeded...You cannot mark attendance now..!",Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
                     Intent intent=new Intent(Main_Page.this,Mark_Attendance.class);
-                    intent.putExtra("username", un);
-                    intent.putExtra("pg2",pg);
-                    intent.putExtra("urlimg",profurl);
+                    Intent i=getIntent();
+                    String pg12=i.getStringExtra("passgrn");
+                    String un3=i.getStringExtra("username");
+                    String prof2=getIntent().getStringExtra("urlimg");
+                    intent.putExtra("username", un3);
+                    intent.putExtra("passgrn",pg12);
+                    intent.putExtra("urlimg",prof2);
                     startActivity(intent);
                 }
 
@@ -170,9 +193,13 @@ public class Main_Page extends AppCompatActivity {
                    if(dayOfWeek.equals("Wednesday")||dayOfWeek.equals("Sunday"))
                    {
                        Intent intent=new Intent(Main_Page.this,Voting_Page.class);
-                       intent.putExtra("username", un);
-                       intent.putExtra("pg2",pg);
-                       intent.putExtra("urlimg",profurl);
+                   Intent i=getIntent();
+                   String pg13=i.getStringExtra("passgrn");
+                   String un4=i.getStringExtra("username");
+                   String prof3=getIntent().getStringExtra("urlimg");
+                   intent.putExtra("username", un4);
+                       intent.putExtra("pg2",pg13);
+                       intent.putExtra("urlimg",prof3);
                        startActivity(intent);
                    }
                    else
@@ -186,13 +213,54 @@ public class Main_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Main_Page.this,Feedback_Page.class);
-                intent.putExtra("username", un);
-                intent.putExtra("pg2",pg);
-                intent.putExtra("urlimg",profurl);
+                Intent i=getIntent();
+                String pg14=i.getStringExtra("passgrn");
+                String un5=i.getStringExtra("username");
+                String prof4=getIntent().getStringExtra("urlimg");
+                intent.putExtra("username", un5);
+                intent.putExtra("pg2",pg14);
+                intent.putExtra("urlimg",prof4);
                 startActivity(intent);
             }
         });
         //  //here i have to fetch the student name from database
+
+        if(pg!=null)
+        {
+            String date,m="";
+            date=dateFormat.format(calendar.getTime());
+            String dayOfWeek1 = dateFormat.format(calendar.getTime());
+            int hourOfDay = calendar.get(Calendar.HOUR_OF_DAY);
+            if (hourOfDay >= 5 && hourOfDay < 13) {
+                m= "Afternoon";
+            }
+            else if (hourOfDay >= 14 && hourOfDay <= 17) {
+                m= "Night";
+            }
+            DatabaseReference rf=FirebaseDatabase.getInstance().getReference("Attendance");
+            rf.child(date).child(m).child(pg).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (snapshot.exists()) {
+                        int a=snapshot.child("p").getValue(Integer.class);
+                        if(a==1)
+                       binding.yourRecentAttendance.setText("Yes");
+                        else
+                            binding.yourRecentAttendance.setText("No");
+
+                    }
+                    else
+                    {
+                        binding.yourRecentAttendance.setText("Attendance not marked yet");
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    // Handle errors
+                }
+            });
+        }
 
     }
 }

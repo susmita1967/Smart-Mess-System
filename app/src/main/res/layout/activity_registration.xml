@@ -123,7 +123,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/GRN"
             app:layout_constraintTop_toBottomOf="@+id/GRN"
-            app:layout_constraintVertical_bias="0.046" />
+            app:layout_constraintVertical_bias="0.071" />
 
         <EditText
             android:id="@+id/PhoneNumber"

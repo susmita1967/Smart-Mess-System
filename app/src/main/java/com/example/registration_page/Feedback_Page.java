@@ -107,10 +107,10 @@ public class Feedback_Page extends AppCompatActivity {
                                         binding.progressBar10.setVisibility(View.INVISIBLE);
                                         String username1 = getIntent().getStringExtra("username");
                                         String profurl=getIntent().getStringExtra("urlimg");
-                                        if (username1 != null && profurl!=null)  {
+                                        if (username1 != null || profurl!=null)  {//and ch or kelay
                                             Intent intent=new Intent(Feedback_Page.this, Main_Page.class);
-                                            intent.putExtra("username", username1); // Pass the username back to Main_Page
-                                            intent.putExtra("urlimg",profurl);
+                                            /*intent.putExtra("username", username1); // Pass the username back to Main_Page
+                                            intent.putExtra("urlimg",profurl);*/
                                             Toast.makeText(Feedback_Page.this,"Feedback submitted!!",Toast.LENGTH_SHORT).show();
                                             startActivity(intent);
                                             finish();

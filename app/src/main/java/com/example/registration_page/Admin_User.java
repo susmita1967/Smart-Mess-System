@@ -26,7 +26,7 @@ public class Admin_User extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(Admin_User.this, Admin_Login.class);
                 startActivity(intent);
-                finish();
+                //finish();
             }
 
         });
@@ -39,14 +39,14 @@ public class Admin_User extends AppCompatActivity {
                     // User is already signed in, navigate to the desired screen.
                     Intent intent=new Intent(Admin_User.this,Main_Page.class);
                     startActivity(intent);
-                    finish();
+                    //finish();
                 }
                 else
                 {
                     Intent intent = new Intent(Admin_User.this, Login.class);
                     startActivity(intent);
                   //  Toast.makeText(Admin_User.this, "Current user is null", Toast.LENGTH_SHORT).show();
-                    finish();
+                   // finish();
                 }
 
             }
@@ -54,17 +54,5 @@ public class Admin_User extends AppCompatActivity {
         });
 
     }
-   /* @Override
-    protected void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-        if (currentUser != null) {
-            // User is already signed in, navigate to the desired screen.
-            Intent intent=new Intent(Admin_User.this,Main_Page.class);
-            startActivity(intent);
-            finish();
-        }
-        // If the user is not signed in, they will stay on the Forget_Pasword activity.
-    }*/
+
     }
